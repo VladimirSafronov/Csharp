@@ -7,10 +7,9 @@ c = a;
 a = b;
 b = c;
 
-Console.Write("a = ");
-Console.WriteLine(a);
-Console.Write("b = ");
-Console.WriteLine(b);
+Console.WriteLine($"a = {a} \nb = {b}");
+Console.WriteLine("a = " + a + " b = " + b);
+
 
 
 
