@@ -40,14 +40,16 @@ while(index < number)
 // }
 //====================================
 
-index = 0;
-int criticalNumber = 50;
-Console.WriteLine();
-while(index < number)
-{
-    if(A[index] <= criticalNumber)
-    {
-        Console.WriteLine(A[index]);
-    }
-    index++;
-}
+// index = 0;
+// int criticalNumber = 50;
+// Console.WriteLine();
+// while(index < number)
+// {
+//     if(A[index] <= criticalNumber)
+//     {
+//         Console.WriteLine(A[index]);
+//     }
+//     index++;
+// }
+//====================================
+
