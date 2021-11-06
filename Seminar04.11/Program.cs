@@ -329,22 +329,56 @@
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 
-int FindQuarter(int x, int y)
-{
-    int quarter = 0;
-    if(x > 0 & y > 0) quarter = 1;
-    if(x < 0 & y > 0) quarter = 2;
-    if(x < 0 & y < 0) quarter = 3;
-    if(x > 0 & y < 0) quarter = 4;
-    return quarter;
-}
+// int FindQuarter(int x, int y)
+// {
+//     int quarter = 0;
+//     if(x > 0 & y > 0) quarter = 1;
+//     if(x < 0 & y > 0) quarter = 2;
+//     if(x < 0 & y < 0) quarter = 3;
+//     if(x > 0 & y < 0) quarter = 4;
+//     return quarter;
+// }
 
-int ans = FindQuarter(3, -3);
-Console.WriteLine(ans);
+// int ans = FindQuarter(3, -3);
+// Console.WriteLine(ans);
 
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
+
+// void InputQuarter(int arg)
+// {
+//     if(arg == 1) Console.WriteLine($"x>0, y>0");
+//     if(arg == 2) Console.WriteLine($"x<0, y>0");
+//     if(arg == 3) Console.WriteLine($"x<0, y<0");
+//     if(arg == 4) Console.WriteLine($"x>0, y<0");
+// }
+
+// InputQuarter(4);
+
 // 21. Программа проверяет пятизначное число на палиндромом.
+
+// bool Func21(int number)
+// {
+//     int first = (number / 10000) % 10; 
+//     int second = (number / 1000) % 10; 
+//     int fourth = (number / 10) % 10; 
+//     int fifth = number % 10;
+//     bool result = false;
+//     if(first == fifth & second == fourth) result = true;
+//     return result;
+// }
+
+// bool ans = Func21(12331);
+// PrintResult(ans);
+
+// void PrintResult(bool n)
+// {
+//     if(n == true) Console.WriteLine("Является");
+//     if(n == false) Console.WriteLine("Не является");
+// }
+
 // 22. Найти расстояние между точками в пространстве 2D/3D
+
+
 
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
