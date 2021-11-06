@@ -9,7 +9,36 @@
 // Console.WriteLine(res);
 
 //  1. По двум заданным числам проверять является ли первое квадратом второго
+
+// void Func1(int x, int y)
+// {
+//     if(x == y * y) Console.WriteLine($"Число {x} является квадратом числа {y}");
+//     if(y == x * x) Console.WriteLine($"Число {y} является квадратом числа {x}");
+//     else Console.WriteLine("Не является");
+// }
+// Func1(25, 3);
+
+
 //  2. Даны два числа. Показать большее и меньшее число
+
+// int CreateNum()
+// {
+//     int number = new Random().Next(1, 100);
+//     return number;
+// }
+
+// int a = CreateNum();
+// int b = CreateNum();
+
+// void FindMaxNumber(int x, int y)
+// {
+//     if(x > y) Console.WriteLine($"{x} > {y}");
+//     if(y > x) Console.WriteLine($"{y} > {x}");
+//     if(x == y) Console.WriteLine($"{x} = {y}");
+// }
+
+// FindMaxNumber(a, b);
+
 //  3. =======По заданному номеру дня недели вывести его название=======
 
 // void Func(int x)
@@ -20,7 +49,41 @@
 // Func(1);
 
 //  4. Найти максимальное из трех чисел
+
+// int FindMaxNumber(int x, int y, int z)
+// {
+//     int max = x;
+//     if(y > max) max = y;
+//     if(z > max) max = z;
+//     return max;
+// }
+
+// int CreateNum()
+// {
+//     int number = new Random().Next(1, 100);
+//     return number;
+// }
+
+// int a = CreateNum();
+// Console.Write($"{a} ");
+// int b = CreateNum();
+// Console.Write($"{b} ");
+// int c = CreateNum();
+// Console.WriteLine(c);
+
+// int ans = FindMaxNumber(a, b, c);
+// Console.WriteLine($"Максимальное число {ans}");
+
 //  5. Написать программу вычисления значения функции y=f(a)
+
+// double f(double a)
+// {
+//     double res = Math.Sin (a);
+//     return res;
+// }
+// double sin = f(2);
+// Console.Write(sin);
+
 //  6. =======Выяснить является ли число чётным========
 
 // void Func(int a)
@@ -258,15 +321,10 @@
 
 // bool Func18(bool x, bool y)
 // {
-//     bool output = false;
-//     if(!(x & y) == !x ^ !y)
-//     {
-//         output = true;
-//     }
-//     return output;
+//     return (!(x & y) == !x || !y);
 // }
 
-// bool ans = Func18(false, false);
+// bool ans = Func18(false, true);
 // Console.WriteLine(ans);
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
