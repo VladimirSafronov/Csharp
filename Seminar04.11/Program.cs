@@ -391,9 +391,32 @@
 
 // 22. Найти расстояние между точками в пространстве 2D/3D
 
+//формула поиска расстояния между токами A и B = корень(xB - xA)^2 + (yB - yA)^2 + (zB - zA)^2;
+
+// double SearchDistancePoints3D(int x1, int y1, int z1, int x2, int y2, int z2)
+// {
+//     double result = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2)); 
+//     return result;
+// }
+// double ans = SearchDistancePoints3D(2, 3, 2, -5, -7, -6);
+// Console.WriteLine(ans);
 
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
+
+// int n = 5;
+// Console.WriteLine($"Таблица квадратов чисел от 1 до {n}");
+
+// void FuncPow(int arg)
+// {
+//     for(int i = 1; i <= arg; i++)
+//     {
+//         double result = Math.Pow(i, 2);
+//         Console.WriteLine($"{i}^2 = {result}");
+//     }
+// }
+// FuncPow(n);
+
 // 24. Найти кубы чисел от 1 до N
 // 25. Найти сумму чисел от 1 до А
 // 26. Возведите число А в натуральную степень B используя цикл
