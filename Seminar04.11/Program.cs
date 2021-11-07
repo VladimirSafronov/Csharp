@@ -433,6 +433,17 @@
 // FuncPow(n);
 
 // 25. Найти сумму чисел от 1 до А
+
+// int a = 1000;
+// int SumNumbersFrom1(int arg)
+// {
+//     int result = 1;
+//     for(int i = 1; i <= arg; i++) result = result + i;
+//     return result;
+// }
+// int ans = SumNumbersFrom1(a);
+// Console.WriteLine(ans);
+
 // 26. Возведите число А в натуральную степень B используя цикл
 // 27. Определить количество цифр в числе
 // 28. Подсчитать сумму цифр в числе
