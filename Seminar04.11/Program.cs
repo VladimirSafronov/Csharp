@@ -480,6 +480,20 @@
 // Console.WriteLine(ans);
 
 // 28. Подсчитать сумму цифр в числе
+
+// int SumNumbers(int num)
+// {
+//     int total = 0;
+//     while(num != 0)
+//     {
+//         total = total + num % 10;
+//         num = num / 10;
+//     }
+//     return total;
+// }
+// int sum = SumNumbers(153);
+// Console.WriteLine(sum);
+
 // 29. Написать программу вычисления произведения чисел от 1 до N
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
