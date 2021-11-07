@@ -445,6 +445,19 @@
 // Console.WriteLine(ans);
 
 // 26. Возведите число А в натуральную степень B используя цикл
+
+// double a = 3;
+// double b = 4;
+
+// double FuncPow(double argA, double argB)
+// {
+//     double result = 0;
+//     for(double i = 1; i <= argA; i++) result = Math.Pow(i, argB);
+//     return result;
+// }
+// double ans = FuncPow(a, b);
+// Console.WriteLine(ans);
+
 // 27. Определить количество цифр в числе
 // 28. Подсчитать сумму цифр в числе
 // 29. Написать программу вычисления произведения чисел от 1 до N
