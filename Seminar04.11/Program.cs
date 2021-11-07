@@ -495,6 +495,17 @@
 // Console.WriteLine(sum);
 
 // 29. Написать программу вычисления произведения чисел от 1 до N
+
+// int a = 10;
+// int MultiplicationNumFrom1(int arg)
+// {
+//     int result = 1;
+//     for(int i = 1; i <= arg; i++) result = result * i;
+//     return result;
+// }
+// int ans = MultiplicationNumFrom1(a);
+// Console.WriteLine(ans);
+
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
 // Почувствуй себя сеньором
