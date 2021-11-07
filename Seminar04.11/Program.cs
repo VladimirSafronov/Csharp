@@ -459,6 +459,26 @@
 // Console.WriteLine(ans);
 
 // 27. Определить количество цифр в числе
+
+// int FindQuantity(int arg)
+// {
+//     int result = 1;
+//     int div = 10;
+//     for(int i = 2; i < 100; i++)
+//     {
+//         if(arg / div != 0)
+//         {
+//             div = div * 10; 
+//             result = i;
+//         }
+//         else break;
+//     }
+//     return result;
+// }
+
+// int ans = FindQuantity(-125219);
+// Console.WriteLine(ans);
+
 // 28. Подсчитать сумму цифр в числе
 // 29. Написать программу вычисления произведения чисел от 1 до N
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
