@@ -10,43 +10,54 @@
 
 //  1. По двум заданным числам проверять является ли первое квадратом второго
 
-// void Func1(int x, int y)
+// bool Func1(int x, int y)
 // {
-//     if(x == y * y) Console.WriteLine($"Число {x} является квадратом числа {y}");
-//     if(y == x * x) Console.WriteLine($"Число {y} является квадратом числа {x}");
-//     else Console.WriteLine("Не является");
+//     return x == y * y;
 // }
-// Func1(25, 3);
-
+// Console.WriteLine(Func1(25, 5));
 
 //  2. Даны два числа. Показать большее и меньшее число
 
 // int CreateNum()
 // {
-//     int number = new Random().Next(1, 100);
-//     return number;
+//     return new Random().Next(1, 100);
 // }
 
 // int a = CreateNum();
 // int b = CreateNum();
 
-// void FindMaxNumber(int x, int y)
+// int Max(int first, int second)
 // {
-//     if(x > y) Console.WriteLine($"{x} > {y}");
-//     if(y > x) Console.WriteLine($"{y} > {x}");
-//     if(x == y) Console.WriteLine($"{x} = {y}");
+//     if (first > second) return first;
+//     else return second;
 // }
 
-// FindMaxNumber(a, b);
+// int Min(int fir, int sec)
+// {
+//     if (fir < sec) return fir;
+//     else return sec;
+// }
+
+// int high = Max(a, b);
+// int low = Min(a, b);
+
+// Console.WriteLine($"Большее число {high}");
+// Console.WriteLine($"Меньшее число {low}");
+//__________________
+//верхние методы сокращаются до показаных снизу, которые можно соединить в один
+// int Max2(int first, int second) => first > second ? first : second;
+// int Min2(int fir, int sec) => fir < sec ? fir : sec;
+
+// (int min, int max) MinMax(int f, int s) => f > s ? (f, s) : (s, f);
 
 //  3. =======По заданному номеру дня недели вывести его название=======
 
-// void Func(int x)
+// string Func(int x)
 // {
-//     string [] array = {"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "Sunday"};
-//     Console.WriteLine(array[x - 1]); 
+//     string [] array = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+//     return array[x - 1]; 
 // }
-// Func(1);
+// Console.WriteLine(Func(4));
 
 //  4. Найти максимальное из трех чисел
 
@@ -60,8 +71,7 @@
 
 // int CreateNum()
 // {
-//     int number = new Random().Next(1, 100);
-//     return number;
+//     return new Random().Next(1, 100);
 // }
 
 // int a = CreateNum();
@@ -76,105 +86,79 @@
 
 //  5. Написать программу вычисления значения функции y=f(a)
 
-// double f(double a)
+// double F(double a)
 // {
-//     double res = Math.Sin (a);
-//     return res;
+//     return Math.Sin (a);
 // }
-// double sin = f(2);
+// double sin = F(2);
 // Console.Write(sin);
 
 //  6. =======Выяснить является ли число чётным========
 
-// void Func(int a)
+// bool Func(int a)
 // {
-//     if(a % 2 == 0)
-//     {
-//         Console.WriteLine("Является четным");
-//     }
-//     else
-//     {
-//         Console.WriteLine("Не является четным");
-//     }
+//     return a % 2 == 0;
 // }
-// Func(5);
-
+// Console.WriteLine(Func(6));
 
 //  7. =======Показать числа от -N до N========
 
 // int [] arrayA = new int [10];
 
-// void CreateArray(int [] array)
+// int[] CreateArray(int [] array)
 // {
 //     for(int i = 0; i < array.Length; i++)
 //     {
 //         array[i] = new Random().Next(-10, 11);
 //     }
-// }
-
-// void ShowArray(int [] array)
-// {
-//     for(int ind = 0; ind < array.Length; ind++)
-//     {
-//         Console.Write($"{arrayA[ind]} ");
-//     }
+//     return array;
 // }
 
 // CreateArray(arrayA);
-// ShowArray(arrayA);
+
+// for(int count = 0; count < arrayA.Length; count++) Console.Write($"{arrayA[count]} ");
 
 //  8. =========Показать четные числа от 1 до N=========
 
 // int [] arrayA = new int [10];
+// int n = 21;
 
-// void CreateArray(int [] array)
+// int [] CreateArray(int [] array)
 // {
 //     for(int i = 0; i < array.Length; i++)
 //     {
-//         array[i] = new Random().Next(1, 21);
+//         array[i] = new Random().Next(1, n + 1);
 //     }
-// }
-
-// void ShowArray(int [] array)
-// {
-//     for(int ind = 0; ind < array.Length; ind++)
-//     {
-//         Console.Write($"{arrayA[ind]} ");
-//     }
-// }
-
-// void ShowEven(int [] array)
-// {
-//     for(int index = 0; index < array.Length; index++)
-//     if(arrayA[index] % 2 == 0)
-//     {
-//         Console.Write($"{arrayA[index]} ");
-//     }
+//     return array;
 // }
 
 // CreateArray(arrayA);
-// ShowArray(arrayA);
+
+// for(int ind = 0; ind < arrayA.Length; ind++) Console.Write($"{arrayA[ind]} ");
+
 // Console.WriteLine();
-// ShowEven(arrayA);
+
+// for(int index = 0; index < arrayA.Length; index++)
+// {
+//     if(arrayA[index] % 2 == 0) Console.Write($"{arrayA[index]} ");
+// }    
 
 //  9. =====Показать последнюю цифру трёхзначного числа======
 
 // int LastNumber(int arg)
 // {
-//     arg = arg % 10;
-//     return arg;
+//     return arg % 10;
 // }
-// int ans = LastNumber(251);
+// int ans = LastNumber(349);
 // Console.WriteLine(ans);
 
 // 10. =========Показать вторую цифру трёхзначного числа========
 
 // int SecNumber(int arg)
 // {
-//     arg = arg / 10 % 10;
-//     return arg;
+//     return arg / 10 % 10;
 // }
-// int ans = SecNumber(298);
+// int ans = SecNumber(973);
 // Console.WriteLine(ans);
 
 // 11. =========Дано число из отрезка [10, 99]. Показать наибольшую цифру числа=======
@@ -334,7 +318,7 @@
 
 // bool Func18(bool x, bool y)
 // {
-//     return (!(x & y) == !x || !y);
+//     return (!(x && y) == !x || !y);
 // }
 
 // bool ans = Func18(false, true);
@@ -548,3 +532,25 @@
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
+
+//__________________________________________________
+//  5. Написать программу вычисления значения функции y=f(a)
+
+// double Func(double arg)
+// {
+//     double result = Math.Sin(arg);
+//     return result;
+// }
+
+// double ans = Func(4);
+// Console.WriteLine(ans);
+
+//0. ======Вывести квадрат числа=======
+
+// int Func(int arg)
+// {
+//     int result = arg * arg;
+//     return result;
+// }
+// int ans = Func(5);
+// Console.WriteLine(ans);
