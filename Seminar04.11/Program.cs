@@ -43,8 +43,8 @@
 
 // Console.WriteLine($"Большее число {high}");
 // Console.WriteLine($"Меньшее число {low}");
-//__________________
-//верхние методы сокращаются до показаных снизу, которые можно соединить в один
+// __________________
+// //верхние методы сокращаются до показаных снизу, которые можно соединить в один
 // int Max2(int first, int second) => first > second ? first : second;
 // int Min2(int fir, int sec) => fir < sec ? fir : sec;
 
@@ -163,156 +163,113 @@
 
 // 11. =========Дано число из отрезка [10, 99]. Показать наибольшую цифру числа=======
 
-// void MaxNum(int arg)
+// int MaxNum(int arg)
 // {
-//     int a = 0;
-//     int b = 0;
-//     a = arg / 10;
-//     b = arg % 10;
-//     if(a > b)
-//     {
-//         Console.WriteLine(a);
-//     }
-//     else
-//     {
-//         Console.WriteLine(b);
-//     }
+//     int a = arg / 10;
+//     int b = arg % 10;
+//     if(a > b) return a;
+//     else return b;
 // }
 
 // int CreateNum()
 // {
-//     int ranNum = new Random().Next(10, 100);
-//     return ranNum;
+//     return new Random().Next(10, 100);
 // }
 
 // int number = CreateNum();
 // Console.WriteLine(number);
-// MaxNum(number);
+// Console.WriteLine(MaxNum(number));
 
 // 12. ======Удалить вторую цифру трёхзначного числа=========
 
-// void DeleteSecNumber(int arg)
+// int DeleteSecNumber(int arg)
 // {
 //     int a = arg / 100;
 //     int b = arg % 10;
-//     int c = a * 10 + b;
-//     Console.WriteLine(c);
+//     return a * 10 + b;
 // }
 
-// DeleteSecNumber(371);
+// int ans = DeleteSecNumber(843);
+// Console.WriteLine(ans);
 
 // 13. ========Выяснить, кратно ли число заданному, если нет, вывести остаток.=======
 
 // int CreateNum()
 // {
-//     int ranNum = new Random().Next(10, 100);
-//     return ranNum;
+//     return new Random().Next(10, 100);
 // }
 
 // int CreateDev()
 // {
-//     int devNum = new Random().Next(2, 10);
-//     return devNum;
+//     return new Random().Next(2, 10);
 // }
 
 // int firstNum = CreateNum();
 // int secondNum = CreateDev();
 
-// if(firstNum % secondNum == 0)
+// bool Multiple(int a, int b)
 // {
-//     Console.WriteLine($"Число {firstNum} кратно {secondNum}");
+//     if(a % b == 0) return true;
+//     else 
+//     {
+//         int residual = firstNum % secondNum;
+//         Console.WriteLine($"Остаток деления {firstNum} на {secondNum} равен {residual}");
+//         return false;
+//     }
 // }
-// else
-// {
-//     int residual = firstNum % secondNum;
-//     Console.WriteLine($"Остаток деления {firstNum} на {secondNum} равен {residual}");
-// }
+
+// Console.WriteLine(Multiple(firstNum, secondNum));
 
 // 14. Найти третью цифру числа или сообщить, что её нет
 
 // int RandomNum()
 // {
-//     int x = new Random().Next(1, 1000);
-//     return x;
+//     return new Random().Next(1, 1001);
 // }
 
 // int number = RandomNum();
+// Console.WriteLine(number);
 
-// void FindThirdNum(int arg)
+// int FindThirdNum(int arg)
 // {
-//     if((number / 100) >= 1)
-//     {
-//         int y = number % 10;
-//         Console.WriteLine($"Третьей цифрой числа {number} является {y}");
-//     }
-//     else
-//     {
-//         Console.WriteLine("Третьей цифры в числе нет!");
-//     }
+//     if(arg / 100 >= 1) return arg /100 % 10;
+//     else return -1;
 // }
-// FindThirdNum(number);
+
+// Console.WriteLine(FindThirdNum(number));
 
 // Почувствуй себя джуном
 
 // 15. =========Дано число. Проверить кратно ли оно 7 и 23
 
-// int Number(int num)
+// bool Number(int num)
 // {
-//     int result = 0;
-//     if(num % 7 == 0)
-//     {
-//         if(num % 23 == 0) result = 1; 
-//     }
-//     return result;
+//     if(num % 7 == 0 && num % 23 == 0) return true;
+//     else return false;
 // }
-// int ans = Number(160);
-// Console.WriteLine(ans);
 
-// 16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
+// Console.WriteLine(Number(161));
+
+
+// 16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным днём
 
 // bool FindWeekend(int arg)
 // {
-//     bool result = false;
-//     int week = 7;
-//     int weekend = 6 & 7;
-//     for(int i = 1; i <= week; i++)
-//     {
-//         if(arg == weekend) result = true;
-//     }
-//     return result;
+//     if (arg == 6 || arg == 7) return true;
+//     else return false;
 // }
 
-// bool ans = FindWeekend(6);
-// Console.WriteLine(ans);
+// Console.WriteLine(FindWeekend(7));
 
 // 17. =====По двум заданным числам проверять является ли одно квадратом другого
 
-// int Func17(int a, int b)
+// bool Func17(int a, int b)
 // {
-//     int res = 0;
-//     if (a > b)
-//     {
-//        if (a == b * b) res = 1;
-//     }
-//     else
-//     {
-//       if (b == a * a) res = 2;  
-
-//     }
-//     return res;
+//     if (a == b * b || b == a * a ) return true;
+//     else return false;
 // }
-// int firstNum = 5;
-// int secondNum = 25;
-// int ans = Func17(firstNum, secondNum);
 
-// void PrintFunc(int arg)
-// {
-//     if (ans == 0) Console.WriteLine("ни одно число не является квадратом другого");
-//     if (ans == 1) Console.WriteLine($"{firstNum} является квадратом {secondNum}");
-//     if (ans == 2) Console.WriteLine($"{secondNum} является квадратом {firstNum}");
-// }
-// PrintFunc(ans);
-
+// Console.WriteLine(Func17(26, 5));
 
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
 
@@ -321,23 +278,19 @@
 //     return (!(x && y) == !x || !y);
 // }
 
-// bool ans = Func18(false, true);
-// Console.WriteLine(ans);
+// Console.WriteLine(Func18(false, true));
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 
 // int FindQuarter(int x, int y)
 // {
-//     int quarter = 0;
-//     if(x > 0 & y > 0) quarter = 1;
-//     if(x < 0 & y > 0) quarter = 2;
-//     if(x < 0 & y < 0) quarter = 3;
-//     if(x > 0 & y < 0) quarter = 4;
-//     return quarter;
+//     if(x > 0 & y > 0) return 1;
+//     if(x < 0 & y > 0) return 2;
+//     if(x < 0 & y < 0) return 3;
+//     else return 4;
 // }
 
-// int ans = FindQuarter(3, -3);
-// Console.WriteLine(ans);
+// Console.WriteLine(FindQuarter(3, -3));
 
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
 
@@ -379,42 +332,37 @@
 
 // double SearchDistancePoints3D(int x1, int y1, int z1, int x2, int y2, int z2)
 // {
-//     double result = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2)); 
-//     return result;
+//     return Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2)); 
 // }
-// double ans = SearchDistancePoints3D(2, 3, 2, -5, -7, -6);
-// Console.WriteLine(ans);
+
+// Console.WriteLine(SearchDistancePoints3D(2, 3, 2, -5, -7, -6));
 
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
 
-// int n = 5;
-// Console.WriteLine($"Таблица квадратов чисел от 1 до {n}");
-
 // void FuncPow(int arg)
 // {
-//     for(int i = 1; i <= arg; i++)
-//     {
-//         double result = Math.Pow(i, 2);
-//         Console.WriteLine($"{i}^2 = {result}");
-//     }
+//     Console.WriteLine($"Таблица квадратов чисел от 1 до {arg}");
+//     for(int i = 1; i <= arg; i++) Console.WriteLine($"{i}^2 = {Math.Pow(i, 2)}");
 // }
-// FuncPow(n);
+
+// FuncPow(5);
 
 // 24. Найти кубы чисел от 1 до N
 
-// int n = 5;
-// Console.WriteLine($"Таблица возведения в куб от 1 до {n}");
-
-// void FuncPow(int arg)
+// double[] FuncPow(int n)
 // {
-//     for(int i = 1; i <= arg; i++)
+//     double [] array = new double [n];
+//     for(int i = 1; i <= n; i++)
 //     {
-//         double result = Math.Pow(i, 3);
-//         Console.WriteLine($"{i}^3 = {result}");
+//         array[i - 1] = Math.Pow(i, 3);
 //     }
+//     return array;
 // }
-// FuncPow(n);
+
+// double [] Cube = FuncPow(10);
+
+// for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
 
 // 25. Найти сумму чисел от 1 до А
 
