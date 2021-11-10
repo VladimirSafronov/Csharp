@@ -579,6 +579,38 @@
 
 
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
+
+// int[] CreateArray()
+// {
+//     int[] array = new int [15];
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(100, 1000);
+//     return array;
+// }
+
+// int[] RandomArray = CreateArray();
+
+// void ShowArray(int[] array)
+// {
+//     for(int j = 0; j < array.Length; j++) Console.Write($"{array[j]} ");
+// }
+
+// ShowArray(RandomArray);
+// Console.WriteLine();
+
+// (int a, int b) FindOddHonest(int[] array)
+// {
+//     int odd = 0; int honest = 0;
+//     for(int k = 0; k < array.Length; k++)
+//     {
+//         if(array[k] % 2 != 0) odd = odd + 1;
+//         else honest = honest + 1;
+//     }
+//     return (odd, honest);
+// }
+
+// Console.WriteLine(FindOddHonest(RandomArray));   //показывает нечетные, затем четные.
+
+
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
 // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
