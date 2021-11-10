@@ -508,6 +508,14 @@
 
 // PrintArray(Array09);
 
+// int FindSum(int[] array)
+// {
+//     int total = 0;
+//     for(int i = 0; i < array.Length; i++) total = total + array[i];
+//     return total;
+// }
+
+// Console.WriteLine(FindSum(Array09));
 
 
 // 34. Написать программу замену элементов массива на противоположные
