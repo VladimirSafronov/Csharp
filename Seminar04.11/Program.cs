@@ -478,7 +478,7 @@
 // int [] CreateArray()
 // {
 //     int [] array = new int [8];
-//     for(int i = 0; i < 8; i++) array[i] = new Random().Next(0, 2);
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 2);
 //     return array;
 // }
 // int[] Array01 = CreateArray();
@@ -490,7 +490,52 @@
 // PrintArray(Array01);
 
 // 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+
+// int[] CreateArr()
+// {
+//     int[] array = new int [12];
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 10);
+//     return array;
+// }
+
+// int[] Array09 = CreateArr();
+
+// void PrintArray(int[] array)
+// {
+//     for(int count = 0; count < array.Length; count++) Console.Write($"{array[count]} ");
+//     Console.WriteLine();
+// }
+
+// PrintArray(Array09);
+
+
+
 // 34. Написать программу замену элементов массива на противоположные
+
+// int[] Array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+// int[] ChangeArrayElement(int[] array)
+// {
+//     int temporary = 0; int rear = array.Length - 1;
+//     for(int front = 0; front < array.Length/2; front++) 
+//     {
+//         temporary = array[front];
+//         array[front] = array[rear];
+//         array[rear] = temporary;
+//         rear --;
+//     }
+//     return array;
+// }
+
+// int[] RearArray = ChangeArrayElement(Array);
+
+// void PrintArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++) Console.Write($"{array[i]} ");
+// }
+
+// PrintArray(RearArray);
+
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
