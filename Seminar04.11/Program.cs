@@ -192,7 +192,7 @@
 // int ans = DeleteSecNumber(843);
 // Console.WriteLine(ans);
 
-// 13. ========Выяснить, кратно ли число заданному, если нет, вывести остаток.=======
+// 13. =======Выяснить, кратно ли число заданному, если нет, вывести остаток.=======
 
 // int CreateNum()
 // {
@@ -206,16 +206,13 @@
 
 // int firstNum = CreateNum();
 // int secondNum = CreateDev();
+// Console.WriteLine(firstNum);
+// Console.WriteLine(secondNum);
 
-// bool Multiple(int a, int b)
+// int Multiple(int a, int b)
 // {
-//     if(a % b == 0) return true;
-//     else 
-//     {
-//         int residual = firstNum % secondNum;
-//         Console.WriteLine($"Остаток деления {firstNum} на {secondNum} равен {residual}");
-//         return false;
-//     }
+//     if(a % b == 0) return -1;   //в случае кратности чисел выведет -1
+//     else return firstNum % secondNum;
 // }
 
 // Console.WriteLine(Multiple(firstNum, secondNum));
@@ -224,7 +221,7 @@
 
 // int RandomNum()
 // {
-//     return new Random().Next(1, 1001);
+//     return new Random().Next(-150, 150);
 // }
 
 // int number = RandomNum();
@@ -232,11 +229,16 @@
 
 // int FindThirdNum(int arg)
 // {
-//     if(arg / 100 >= 1) return arg /100 % 10;
+//     if(arg / 100 != 0) 
+//     {
+//         arg = arg /100 % 10;
+//         if(arg < 0) return arg * -1;    //выводит только положительные цифры
+//         else return arg;
+//     }
 //     else return -1;
 // }
 
-// Console.WriteLine(FindThirdNum(number));
+// Console.WriteLine(FindThirdNum(-78));
 
 // Почувствуй себя джуном
 
@@ -294,41 +296,42 @@
 
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
 
-// void InputQuarter(int arg)
+// string InputQuarter()
 // {
-//     if(arg == 1) Console.WriteLine($"x>0, y>0");
-//     if(arg == 2) Console.WriteLine($"x<0, y>0");
-//     if(arg == 3) Console.WriteLine($"x<0, y<0");
-//     if(arg == 4) Console.WriteLine($"x>0, y<0");
+//     Console.WriteLine("Введите номер четверти: ");
+//     string a = Console.ReadLine();
+//     int arg = Convert.ToInt16(a);
+//     if(arg == 1) return ($"x>0, y>0");
+//     if(arg == 2) return ($"x<0, y>0");
+//     if(arg == 3) return ($"x<0, y<0");
+//     if(arg == 4) return ($"x>0, y<0");
+//     else return ($"Существует значение четвертей от 1 до 4!");
 // }
 
-// InputQuarter(4);
+// string ans = InputQuarter();
+// Console.WriteLine(ans);
 
 // 21. Программа проверяет пятизначное число на палиндромом.
 
-// bool Func21(int number)
+// bool Func21(int n)
 // {
-//     int first = (number / 10000) % 10; 
-//     int second = (number / 1000) % 10; 
-//     int fourth = (number / 10) % 10; 
-//     int fifth = number % 10;
-//     bool result = false;
-//     if(first == fifth & second == fourth) result = true;
-//     return result;
+//     if(n / 10000 % 10 == n % 10 && n / 1000 % 10 == n / 10 % 10) return true;
+//     else return false;
 // }
 
-// bool ans = Func21(12331);
-// PrintResult(ans);
-
-// void PrintResult(bool n)
-// {
-//     if(n == true) Console.WriteLine("Является");
-//     if(n == false) Console.WriteLine("Не является");
-// }
+// Console.WriteLine(Func21(48594));
 
 // 22. Найти расстояние между точками в пространстве 2D/3D
 
 //формула поиска расстояния между токами A и B = корень(xB - xA)^2 + (yB - yA)^2 + (zB - zA)^2;
+
+// double SearchDistancePoints2D(int x1, int y1, int x2, int y2)
+// {
+//     return Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)); 
+// }
+
+// Console.WriteLine(SearchDistancePoints2D(2, 3, -5, -7));
+
 
 // double SearchDistancePoints3D(int x1, int y1, int z1, int x2, int y2, int z2)
 // {
