@@ -343,13 +343,21 @@
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
 
-// void FuncPow(int arg)
+// double[] FuncPow(int arg)
 // {
-//     Console.WriteLine($"Таблица квадратов чисел от 1 до {arg}");
-//     for(int i = 1; i <= arg; i++) Console.WriteLine($"{i}^2 = {Math.Pow(i, 2)}");
+//     double [] array = new double [arg];
+//     for(int i = 1; i <= arg; i++) 
+//     {
+//         array[i-1] = Math.Pow(i, 2);
+//         Console.WriteLine($"{i}^2 = {array[i-1]}");
+//     }
+//     return array;
 // }
+// int n = 10;
+// double[] Array = FuncPow(n);
 
-// FuncPow(5);
+//Console.WriteLine($"Таблица квадратов чисел от 1 до {arg}");
+// Console.WriteLine($"{i}^2 = {Math.Pow(i, 2)}");
 
 // 24. Найти кубы чисел от 1 до N
 
@@ -369,29 +377,27 @@
 
 // 25. Найти сумму чисел от 1 до А
 
-// int a = 1000;
+// int a = 500;
 // int SumNumbersFrom1(int arg)
 // {
 //     int result = 1;
 //     for(int i = 1; i <= arg; i++) result = result + i;
 //     return result;
 // }
-// int ans = SumNumbersFrom1(a);
-// Console.WriteLine(ans);
+// Console.WriteLine(SumNumbersFrom1(a));
 
 // 26. Возведите число А в натуральную степень B используя цикл
 
-// double a = 3;
-// double b = 4;
+// double a = 1.13;
+// int b = 5;
 
-// double FuncPow(double argA, double argB)
+// double FuncPow(double argA, int argB)
 // {
-//     double result = 0;
-//     for(double i = 1; i <= argA; i++) result = Math.Pow(i, argB);
+//     double result = argA;
+//     for(int i = 1; i < argB; i++) result = result * argA;
 //     return result;
 // }
-// double ans = FuncPow(a, b);
-// Console.WriteLine(ans);
+// Console.WriteLine(FuncPow(a, b));
 
 // 27. Определить количество цифр в числе
 
@@ -411,8 +417,7 @@
 //     return result;
 // }
 
-// int ans = FindQuantity(-125219);
-// Console.WriteLine(ans);
+// Console.WriteLine(FindQuantity(864125219));
 
 // 28. Подсчитать сумму цифр в числе
 
@@ -426,7 +431,7 @@
 //     }
 //     return total;
 // }
-// int sum = SumNumbers(153);
+// int sum = SumNumbers(135);
 // Console.WriteLine(sum);
 
 // 29. Написать программу вычисления произведения чисел от 1 до N
@@ -438,20 +443,23 @@
 //     for(int i = 1; i <= arg; i++) result = result * i;
 //     return result;
 // }
-// int ans = MultiplicationNumFrom1(a);
-// Console.WriteLine(ans);
+// Console.WriteLine(MultiplicationNumFrom1(a));
 
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
-// void CubeHonestNum(int arg)   
+// double[] CubeHonestNum(int arg)   
 // {
-//     for(int i = 2; i <= arg; i+=2)
+//     double [] array = new double[arg / 2];
+//     int count = 0;
+//     for(int i = 2; i <= arg; i+=2) 
 //     {
-//         Console.WriteLine(Math.Pow(i, 3));
+//         array[count] = Math.Pow(i, 3); 
+//         count++;
 //     }
+//     return array;
 // }
-
-// CubeHonestNum(10);
+// double[] Array = CubeHonestNum(10);
+// for(int j = 0; j < Array.Length; j++) Console.WriteLine(Array[j]);
 
 // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
