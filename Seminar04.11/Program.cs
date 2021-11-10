@@ -537,6 +537,39 @@
 // PrintArray(RearArray);
 
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
+
+// int[] MadeArray()
+// {
+//     int[] array = new int [10];
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 10);
+//     return array;
+// }
+
+// int[] NewArray = MadeArray();
+
+// void PrintArray(int[] array)
+// {
+//     for(int count = 0; count < array.Length; count++) Console.Write($"{array[count]} ");
+//     Console.WriteLine();
+// }
+
+// PrintArray(NewArray);
+
+// bool FindNumber(int arg, int[] array)
+// {
+//     bool ans = false;
+//     int k = 0;
+//     while(k < array.Length) 
+//     {
+//         if(array[k] == arg) ans = true;
+//         k++;
+//     }
+//     return ans;
+// }
+
+// Console.WriteLine(FindNumber(5, NewArray));
+
+
 // 36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
