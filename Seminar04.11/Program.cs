@@ -655,7 +655,6 @@
 
 // int SumOddPosition(int[] array)
 // {
-//     //int odd = 1;
 //     int sum = 0;
 //     int count = 0; 
 //     while(count < array.Length)
@@ -673,6 +672,46 @@
 // Console.WriteLine(SumOddPosition(arrayA));
 
 // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+
+// int[] someArray = new int [10];
+
+// int[] CreateArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 10);
+//     return array;
+// }
+
+// int[] arrayA = CreateArray(someArray);
+
+// void ShowArray(int[] array)
+// {
+//     for(int j = 0; j < array.Length; j++) Console.Write($"{array[j]} ");
+// }
+
+// ShowArray(arrayA);
+// Console.WriteLine();
+
+// int[] multiplicationPairs(int[] array)
+// {
+//     int rear = array.Length -1;
+//     int[] multPairs = new int[array.Length / 2];
+//     for(int count = 0; count < multPairs.Length; count++) 
+//     {
+//         multPairs[count] = array[count] * array [rear];
+//         rear--;
+//     }
+//     return multPairs;
+// }
+
+// int[] arrayB = multiplicationPairs(arrayA);
+
+// void ShowArray2(int[] array)
+// {
+//     for(int z = 0; z < array.Length; z++) Console.Write($"{array[z]} ");
+// }
+
+// ShowArray2(arrayB);
+
 // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
 
 // Почувствуй себя лидом
