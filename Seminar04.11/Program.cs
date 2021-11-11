@@ -635,6 +635,43 @@
 // Console.WriteLine(Find00(arrayA));
 
 // 38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
+
+// int[] CreateArray()
+// {
+//     int[] array = new int[15];
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 100);
+//     return array;
+// }
+
+// int[] arrayA = CreateArray();
+
+// void ShowArray(int[] array)
+// {
+//     for(int j = 0; j < array.Length; j++) Console.Write($"{array[j]} ");
+// }
+
+// ShowArray(arrayA);
+// Console.WriteLine();
+
+// int SumOddPosition(int[] array)
+// {
+//     //int odd = 1;
+//     int sum = 0;
+//     int count = 0; 
+//     while(count < array.Length)
+//     {
+//         if(count % 2 != 0) 
+//         {
+//             sum = sum + array[count];
+//             count++;
+//         }
+//         else count++;
+//     } 
+//     return sum;
+// }
+
+// Console.WriteLine(SumOddPosition(arrayA));
+
 // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
 
