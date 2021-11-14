@@ -5,8 +5,7 @@
 // {
 //     return x * x;
 // }
-// int res = Func(5);
-// Console.WriteLine(res);
+// Console.WriteLine(Func(5));
 
 //  1. По двум заданным числам проверять является ли первое квадратом второго
 
@@ -14,7 +13,7 @@
 // {
 //     return x == y * y;
 // }
-// Console.WriteLine(Func1(25, 5));
+// Console.WriteLine(Func1(26, 5));
 
 //  2. Даны два числа. Показать большее и меньшее число
 
@@ -81,8 +80,7 @@
 // int c = CreateNum();
 // Console.WriteLine(c);
 
-// int ans = FindMaxNumber(a, b, c);
-// Console.WriteLine($"Максимальное число {ans}");
+// Console.WriteLine($"Максимальное число {FindMaxNumber(a, b, c)}");
 
 //  5. Написать программу вычисления значения функции y=f(a)
 
@@ -90,8 +88,8 @@
 // {
 //     return Math.Sin (a);
 // }
-// double sin = F(2);
-// Console.Write(sin);
+
+// Console.Write(F(2));
 
 //  6. =======Выяснить является ли число чётным========
 
@@ -138,28 +136,47 @@
 
 // Console.WriteLine();
 
-// for(int index = 0; index < arrayA.Length; index++)
+// int[] honest(int[] array)
 // {
-//     if(arrayA[index] % 2 == 0) Console.Write($"{arrayA[index]} ");
-// }    
+//     int count = 0;
+//     for(int index = 0; index < arrayA.Length; index++) if(arrayA[index] % 2 == 0) count++;
+//     int[] arr = new int[count];
+//     count = 0;
+//     int l = 0;
+//     while(l < arrayA.Length) 
+//     {
+//         if(arrayA[l] % 2 == 0) 
+//         {
+//             arr[count] = arrayA[l];
+//             count++;
+//             l++;
+//         }
+//         else l++;
+//     }
+//     return arr;
+// }
+
+// int[] arrayB = honest(arrayA);
+// for(int k = 0; k < arrayB.Length; k++) Console.Write($"{arrayB[k]} ");
 
 //  9. =====Показать последнюю цифру трёхзначного числа======
 
 // int LastNumber(int arg)
 // {
+//     if(arg < 0) arg = arg * -1;
 //     return arg % 10;
 // }
-// int ans = LastNumber(349);
-// Console.WriteLine(ans);
+// Console.WriteLine(LastNumber(349));
 
 // 10. =========Показать вторую цифру трёхзначного числа========
 
 // int SecNumber(int arg)
 // {
+//     if(arg < 0) arg = arg * -1;
 //     return arg / 10 % 10;
 // }
-// int ans = SecNumber(973);
-// Console.WriteLine(ans);
+
+// Console.WriteLine(SecNumber(735));
 
 // 11. =========Дано число из отрезка [10, 99]. Показать наибольшую цифру числа=======
 
@@ -188,9 +205,7 @@
 //     int b = arg % 10;
 //     return a * 10 + b;
 // }
-
-// int ans = DeleteSecNumber(843);
-// Console.WriteLine(ans);
+// Console.WriteLine(DeleteSecNumber(-341));
 
 // 13. =======Выяснить, кратно ли число заданному, если нет, вывести остаток.=======
 
@@ -206,8 +221,8 @@
 
 // int firstNum = CreateNum();
 // int secondNum = CreateDev();
-// Console.WriteLine(firstNum);
-// Console.WriteLine(secondNum);
+// Console.Write($"{firstNum} {secondNum}");
+// Console.WriteLine();
 
 // int Multiple(int a, int b)
 // {
@@ -235,10 +250,10 @@
 //         if(arg < 0) return arg * -1;    //выводит только положительные цифры
 //         else return arg;
 //     }
-//     else return -1;
+//     else return -1;  //вывод -1 означает, что третьей цифры нет
 // }
 
-// Console.WriteLine(FindThirdNum(-78));
+// Console.WriteLine(FindThirdNum(number));
 
 // Почувствуй себя джуном
 
@@ -305,7 +320,7 @@
 //     if(arg == 2) return ($"x<0, y>0");
 //     if(arg == 3) return ($"x<0, y<0");
 //     if(arg == 4) return ($"x>0, y<0");
-//     else return ($"Существует значение четвертей от 1 до 4!");
+//     else return ($"Впишите номер от 1 до 4!");
 // }
 
 // string ans = InputQuarter();
@@ -346,18 +361,13 @@
 // double[] FuncPow(int arg)
 // {
 //     double [] array = new double [arg];
-//     for(int i = 1; i <= arg; i++) 
-//     {
-//         array[i-1] = Math.Pow(i, 2);
-//         Console.WriteLine($"{i}^2 = {array[i-1]}");
-//     }
+//     for(int i = 1; i <= arg; i++) array[i-1] = Math.Pow(i, 2);
 //     return array;
 // }
 // int n = 10;
 // double[] Array = FuncPow(n);
 
-//Console.WriteLine($"Таблица квадратов чисел от 1 до {arg}");
-// Console.WriteLine($"{i}^2 = {Math.Pow(i, 2)}");
+// for(int k = 1; k <= Array.Length; k++) Console.WriteLine($"{k}^2 = {Array[k-1]}");
 
 // 24. Найти кубы чисел от 1 до N
 
@@ -426,24 +436,25 @@
 //     int total = 0;
 //     while(num != 0)
 //     {
+//         if(num < 0) num = num * -1;
 //         total = total + num % 10;
 //         num = num / 10;
 //     }
 //     return total;
 // }
-// int sum = SumNumbers(135);
-// Console.WriteLine(sum);
+
+// Console.WriteLine(SumNumbers(1135));
 
 // 29. Написать программу вычисления произведения чисел от 1 до N
 
-// int a = 10;
+// int n = 10;
 // int MultiplicationNumFrom1(int arg)
 // {
 //     int result = 1;
 //     for(int i = 1; i <= arg; i++) result = result * i;
 //     return result;
 // }
-// Console.WriteLine(MultiplicationNumFrom1(a));
+// Console.WriteLine(MultiplicationNumFrom1(n));
 
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
@@ -525,7 +536,7 @@
 // int[] ChangeArrayElement(int[] array)
 // {
 //     int temporary = 0; int rear = array.Length - 1;
-//     for(int front = 0; front < array.Length/2; front++) 
+//     for(int front = 0; front < array.Length/2; front++) //дохожу до середины массива
 //     {
 //         temporary = array[front];
 //         array[front] = array[rear];
@@ -569,7 +580,11 @@
 //     int k = 0;
 //     while(k < array.Length) 
 //     {
-//         if(array[k] == arg) ans = true;
+//         if(array[k] == arg) 
+//         {
+//             ans = true;
+//             break;
+//         }
 //         k++;
 //     }
 //     return ans;
@@ -656,16 +671,7 @@
 // int SumOddPosition(int[] array)
 // {
 //     int sum = 0;
-//     int count = 0; 
-//     while(count < array.Length)
-//     {
-//         if(count % 2 != 0) 
-//         {
-//             sum = sum + array[count];
-//             count++;
-//         }
-//         else count++;
-//     } 
+//     for(int count = 1; count < array.Length; count +=2) sum = sum + array[count];
 //     return sum;
 // }
 
