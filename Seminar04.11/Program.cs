@@ -101,20 +101,22 @@
 
 //  7. =======Показать числа от -N до N========
 
-// int [] arrayA = new int [10];
+// int n = 3;
 
-// int[] CreateArray(int [] array)
+// int[] CreateArray( int arg)
 // {
-//     for(int i = 0; i < array.Length; i++)
+//     int [] arrayA = new int [arg * 2 + 1];  //+1 для того, чтобы влез 0
+//     for(int i = -arg; i <= arg; i++)
 //     {
-//         array[i] = new Random().Next(-10, 11);
+//         arrayA[i + arg] = i;
 //     }
-//     return array;
+//     return arrayA;
 // }
 
-// CreateArray(arrayA);
+// int[] arr =CreateArray(n);
 
-// for(int count = 0; count < arrayA.Length; count++) Console.Write($"{arrayA[count]} ");
+// // for(int count = 0; count < arrayA.Length; count++) Console.Write($"{arrayA[count]} ");
+// Console.WriteLine(String.Join(',', arr)); //вывод массива на экран через запятую
 
 //  8. =========Показать четные числа от 1 до N=========
 
@@ -242,7 +244,7 @@
 // int number = RandomNum();
 // Console.WriteLine(number);
 
-// int FindThirdNum(int arg)
+// int FindHundredNum(int arg)
 // {
 //     if(arg / 100 != 0) 
 //     {
@@ -253,7 +255,19 @@
 //     else return -1;  //вывод -1 означает, что третьей цифры нет
 // }
 
-// Console.WriteLine(FindThirdNum(number));
+// Console.WriteLine(FindHundredNum(1357));
+
+// int FindThirdNum(int arg)
+// {
+//     arg = Math.Abs(arg);
+//     if(arg / 100 == 0) return -1;
+//     else 
+//     {
+//         while(arg / 100 > 9) arg = arg / 10;
+//         return arg % 10;
+//     }
+// }
+// Console.WriteLine(FindThirdNum(-56854802));
 
 // Почувствуй себя джуном
 
@@ -387,14 +401,25 @@
 
 // 25. Найти сумму чисел от 1 до А
 
-// int a = 500;
-// int SumNumbersFrom1(int arg)
+// double a = 1000;
+// double SumNumbersFrom1(double arg)
 // {
-//     int result = 1;
-//     for(int i = 1; i <= arg; i++) result = result + i;
+//     double result = 0;
+//     for(double i = 1; i <= arg; i++) result = result + i;
 //     return result;
 // }
-// Console.WriteLine(SumNumbersFrom1(a));
+// double res = SumNumbersFrom1(a);
+// DateTime dt = DateTime.Now;
+// Console.WriteLine(res);
+// Console.WriteLine((DateTime.Now - dt).TotalMilliseconds);
+
+// int SumNumbers2(int arg)
+// {
+//     return (arg * (arg + 1)) / 2;
+// }
+// dt = DateTime.Now;
+// Console.WriteLine(SumNumbers2(a));
+// Console.WriteLine((DateTime.Now - dt).TotalMilliseconds);
 
 // 26. Возведите число А в натуральную степень B используя цикл
 
@@ -413,30 +438,26 @@
 
 // int FindQuantity(int arg)
 // {
+//     arg = Math.Abs(arg);
 //     int result = 1;
-//     int div = 10;
-//     for(int i = 2; i < 100; i++)
+//     while(arg > 10) 
 //     {
-//         if(arg / div != 0)
-//         {
-//             div = div * 10; 
-//             result = i;
-//         }
-//         else break;
+//         arg = arg / 10;
+//         result ++;
 //     }
 //     return result;
 // }
 
-// Console.WriteLine(FindQuantity(864125219));
+// Console.WriteLine(FindQuantity(-8641219));
 
 // 28. Подсчитать сумму цифр в числе
 
 // int SumNumbers(int num)
 // {
 //     int total = 0;
+//     num = Math.Abs(num);
 //     while(num != 0)
 //     {
-//         if(num < 0) num = num * -1;
 //         total = total + num % 10;
 //         num = num / 10;
 //     }
@@ -458,18 +479,19 @@
 
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
-// double[] CubeHonestNum(int arg)   
+// double[] CubeEndEvenNum(int first, int end)   
 // {
-//     double [] array = new double[arg / 2];
+//     double [] array = new double[(end - first +1) / 2];  //+1, чтобы влезало в массив при четном начале
+//     if(first % 2 != 0) first +=1;
 //     int count = 0;
-//     for(int i = 2; i <= arg; i+=2) 
+//     for(int i = first; i <= end; i+=2) 
 //     {
 //         array[count] = Math.Pow(i, 3); 
 //         count++;
 //     }
 //     return array;
 // }
-// double[] Array = CubeHonestNum(10);
+// double[] Array = CubeEndEvenNum(8, 21); 
 // for(int j = 0; j < Array.Length; j++) Console.WriteLine(Array[j]);
 
 // Почувствуй себя сеньором
@@ -755,9 +777,25 @@
 
 // Почувствуй себя лидом
 // 41. Выяснить являются ли три числа сторонами треугольника 
+
+
+
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
+
+// Console.WriteLine("Введите число: ");
+// int a = int.Parse(Console.ReadLine());
+// int count = 0;
+// if(a > 0) count++;
+
 // 43. Написать программу преобразования десятичного числа в двоичное
 // 44. Найти точку пересечения двух прямых заданных уравнением y=kx+b, а1 k1 и а2 и k2 заданы
 // 45. Показать числа Фибоначчи
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
+
+
+//переполнение типа:
+
+// byte a1 = 255;
+// a1=(byte)(a1+1);
+// Console.WriteLine(a1);
