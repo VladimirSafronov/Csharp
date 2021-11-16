@@ -497,7 +497,7 @@
 // Почувствуй себя сеньором
 // 31. Задать массив из 8 элементов и вывести их на экран 
 
-// string[] week = { "Дни недели: ", "пн, ", "вт, ", "ср, ", "чт, ", "пт, ", "сб, ", "вс" };
+// string[] week = { "Дни недели:", " пн", " вт", " ср", " чт", " пт", " сб", " вс" };
 
 // void PrintArray(string[] arr)
 // {
@@ -505,6 +505,8 @@
 // }
 
 // PrintArray(week);
+
+// Console.WriteLine(String.Join(',', week)); //упрощенный вывод массива
 
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
 
@@ -516,11 +518,7 @@
 // }
 // int[] Array01 = CreateArray();
 
-// void PrintArray(int[] array)
-// {
-//     for(int k = 0; k < array.Length; k++) Console.Write($"{array[k]} ");
-// }
-// PrintArray(Array01);
+// Console.WriteLine(String.Join(',', Array01));
 
 // 33. Задать массив из 12 элементов, заполненных числами из [-9,9]. Найти сумму положительных/отрицательных элементов массива
 
@@ -566,12 +564,7 @@
 
 // int[] RearArray = ChangeArrayElement(Array);
 
-// void PrintArray(int[] array)
-// {
-//     for(int i = 0; i < array.Length; i++) Console.Write($"{array[i]} ");
-// }
-
-// PrintArray(RearArray);
+// Console.WriteLine(String.Join('|', RearArray));
 
 // 35. Определить, присутствует ли в заданном массиве, некоторое число 
 
@@ -583,14 +576,7 @@
 // }
 
 // int[] NewArray = MadeArray();
-
-// void PrintArray(int[] array)
-// {
-//     for(int count = 0; count < array.Length; count++) Console.Write($"{array[count]} ");
-//     Console.WriteLine();
-// }
-
-// PrintArray(NewArray);
+// Console.WriteLine(String.Join(',', NewArray));
 
 // bool FindNumber(int arg, int[] array)
 // {
@@ -622,26 +608,20 @@
 
 // int[] RandomArray = CreateArray();
 
-// void ShowArray(int[] array)
-// {
-//     for(int j = 0; j < array.Length; j++) Console.Write($"{array[j]} ");
-// }
+// Console.WriteLine(String.Join(',', RandomArray));
 
-// ShowArray(RandomArray);
-// Console.WriteLine();
-
-// (int a, int b) FindOddHonest(int[] array)
+// (int a, int b) FindOddEven(int[] array)
 // {
-//     int odd = 0; int honest = 0;
+//     int odd = 0; int even = 0;
 //     for(int k = 0; k < array.Length; k++)
 //     {
-//         if(array[k] % 2 != 0) odd = odd + 1;
-//         else honest = honest + 1;
+//         if(array[k] % 2 != 0) odd +=1;
+//         else even +=1;
 //     }
-//     return (odd, honest);
+//     return (odd, even);
 // }
 
-// Console.WriteLine(FindOddHonest(RandomArray));   //показывает нечетные, затем четные.
+// Console.WriteLine(FindOddEven(RandomArray));   //показывает нечетные, затем четные.
 
 
 // 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
@@ -660,7 +640,7 @@
 //     int number = 0;
 //     for(int count = 0; count < array.Length; count++) 
 //     {
-//         if(array[count] / 10 > 0 && array[count] / 10 < 10) number = number +1;
+//         if(array[count] / 10 > 0 && array[count] / 10 < 10) number +=1;
 //     }
 //     return number;
 // }
@@ -672,24 +652,18 @@
 // int[] CreateArray()
 // {
 //     int[] array = new int[15];
-//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 100);
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 10);
 //     return array;
 // }
 
 // int[] arrayA = CreateArray();
 
-// void ShowArray(int[] array)
-// {
-//     for(int j = 0; j < array.Length; j++) Console.Write($"{array[j]} ");
-// }
-
-// ShowArray(arrayA);
-// Console.WriteLine();
+// Console.WriteLine(String.Join(',', arrayA));
 
 // int SumOddPosition(int[] array)
 // {
 //     int sum = 0;
-//     for(int count = 1; count < array.Length; count +=2) sum = sum + array[count];
+//     for(int count = 0; count < array.Length; count +=2) sum = sum + array[count];
 //     return sum;
 // }
 
@@ -697,28 +671,20 @@
 
 // 39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
-// int[] someArray = new int [10];
-
-// int[] CreateArray(int[] array)
+// int[] CreateArray()
 // {
+//     int[] array = new int [10];
 //     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 10);
 //     return array;
 // }
 
-// int[] arrayA = CreateArray(someArray);
-
-// void ShowArray(int[] array)
-// {
-//     for(int j = 0; j < array.Length; j++) Console.Write($"{array[j]} ");
-// }
-
-// ShowArray(arrayA);
-// Console.WriteLine();
+// int[] arrayA = CreateArray();
+// Console.WriteLine(String.Join(',', arrayA));
 
 // int[] multiplicationPairs(int[] array)
 // {
 //     int rear = array.Length -1;
-//     int[] multPairs = new int[array.Length / 2];
+//     int[] multPairs = new int[array.Length / 2];  //при нечетной длинне массива, средний элемент теряется, т.к. для него нет пары
 //     for(int count = 0; count < multPairs.Length; count++) 
 //     {
 //         multPairs[count] = array[count] * array [rear];
@@ -728,13 +694,7 @@
 // }
 
 // int[] arrayB = multiplicationPairs(arrayA);
-
-// void ShowArray2(int[] array)
-// {
-//     for(int z = 0; z < array.Length; z++) Console.Write($"{array[z]} ");
-// }
-
-// ShowArray2(arrayB);
+// Console.WriteLine(String.Join(',', arrayB));
 
 // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
 
