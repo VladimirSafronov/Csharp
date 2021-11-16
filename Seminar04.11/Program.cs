@@ -734,7 +734,14 @@
 // Почувствуй себя лидом
 // 41. Выяснить являются ли три числа сторонами треугольника 
 
+// int a = 3; int b = 2; int c = 4;
 
+// bool IsItTriangle(int argA, int argB, int argC)
+// {
+//     return argA + argB > argC && argA + argC > argB && argB + argC > argA;
+// }
+
+// Console.WriteLine(IsItTriangle(a, b, c));
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
 
