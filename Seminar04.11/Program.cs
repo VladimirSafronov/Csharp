@@ -415,7 +415,7 @@
 
 // int SumNumbers2(int arg)
 // {
-//     return (arg * (arg + 1)) / 2;
+//     return (arg * (arg + 1)) / 2;  //формула, сильно ускоряющая работу метода
 // }
 // dt = DateTime.Now;
 // Console.WriteLine(SumNumbers2(a));
@@ -479,19 +479,19 @@
 
 // 30. Показать кубы чисел, заканчивающихся на четную цифру
 
-// double[] CubeEndEvenNum(int first, int end)   
+// double[] CubeLastEvenNum(int first, int last)   
 // {
-//     double [] array = new double[(end - first +1) / 2];  //+1, чтобы влезало в массив при четном начале
+//     double [] array = new double[(last - first +1) / 2];  //+1, чтобы влезало в массив при четном начале
 //     if(first % 2 != 0) first +=1;
 //     int count = 0;
-//     for(int i = first; i <= end; i+=2) 
+//     for(int i = first; i <= last; i+=2) 
 //     {
 //         array[count] = Math.Pow(i, 3); 
 //         count++;
 //     }
 //     return array;
 // }
-// double[] Array = CubeEndEvenNum(8, 21); 
+// double[] Array = CubeLastEvenNum(8, 21); 
 // for(int j = 0; j < Array.Length; j++) Console.WriteLine(Array[j]);
 
 // Почувствуй себя сеньором
@@ -522,34 +522,30 @@
 // }
 // PrintArray(Array01);
 
-// 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+// 33. Задать массив из 12 элементов, заполненных числами из [-9,9]. Найти сумму положительных/отрицательных элементов массива
 
 // int[] CreateArr()
 // {
 //     int[] array = new int [12];
-//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(0, 10);
+//     for(int i = 0; i < array.Length; i++) array[i] = new Random().Next(-9, 10);
 //     return array;
 // }
 
-// int[] Array09 = CreateArr();
+// int[] Array9 = CreateArr();
+// Console.WriteLine(String.Join(',', Array9));
+// Console.WriteLine();
 
-// void PrintArray(int[] array)
+// (int pos, int neg) FindSumPositiveAndNegativeNum(int[] array)
 // {
-//     for(int count = 0; count < array.Length; count++) Console.Write($"{array[count]} ");
-//     Console.WriteLine();
+//     int positiveTotal = 0;
+//     int negativeTotal = 0;
+//     for(int i = 0; i < array.Length; i++) 
+//     if(array[i] > 0) positiveTotal = positiveTotal + array[i];
+//     else negativeTotal = negativeTotal + array[i];
+//     return (positiveTotal, negativeTotal);
 // }
 
-// PrintArray(Array09);
-
-// int FindSum(int[] array)
-// {
-//     int total = 0;
-//     for(int i = 0; i < array.Length; i++) total = total + array[i];
-//     return total;
-// }
-
-// Console.WriteLine(FindSum(Array09));
-
+// Console.WriteLine(FindSumPositiveAndNegativeNum(Array9));
 
 // 34. Написать программу замену элементов массива на противоположные
 
