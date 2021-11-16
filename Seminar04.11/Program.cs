@@ -397,7 +397,7 @@
 
 // double [] Cube = FuncPow(10);
 
-// for(int index = 0; index < Cube.Length; index++) Console.WriteLine(Cube[index]);
+// Console.WriteLine(String.Join(',', Cube));
 
 // 25. Найти сумму чисел от 1 до А
 
@@ -412,7 +412,7 @@
 // DateTime dt = DateTime.Now;
 // Console.WriteLine(res);
 // Console.WriteLine((DateTime.Now - dt).TotalMilliseconds);
-
+// //__________________________
 // int SumNumbers2(int arg)
 // {
 //     return (arg * (arg + 1)) / 2;  //формула, сильно ускоряющая работу метода
@@ -738,10 +738,19 @@
 
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
 
-// Console.WriteLine("Введите число: ");
-// int a = int.Parse(Console.ReadLine());
-// int count = 0;
-// if(a > 0) count++;
+// int EnteredNumbers(int enter)
+// {
+//     int count = 0;
+//     for(int i = 0; i < enter; i++)
+//     {
+//         Console.WriteLine("Введите число: ");
+//         int a = int.Parse(Console.ReadLine());
+//         if(a > 0) count++;
+//     }
+//     return count;
+// }
+// int res = EnteredNumbers(5);
+// Console.WriteLine(res);
 
 // 43. Написать программу преобразования десятичного числа в двоичное
 // 44. Найти точку пересечения двух прямых заданных уравнением y=kx+b, а1 k1 и а2 и k2 заданы
