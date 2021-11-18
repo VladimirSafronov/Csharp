@@ -745,19 +745,99 @@
 
 // // 42. Определить сколько чисел больше 0 введено с клавиатуры
 
-// int EnteredNumbers(int enter)
+// string EnteredNumbers()
 // {
-//     int count = 0;
-//     for(int i = 0; i < enter; i++)
-//     {
-//         Console.WriteLine("Введите число: ");
-//         int a = int.Parse(Console.ReadLine());
-//         if(a > 0) count++;
-//     }
-//     return count;
+//     Console.WriteLine("Введите число через запятую:");
+//     return Console.ReadLine();
 // }
-// int res = EnteredNumbers(5);
-// Console.WriteLine(res);
+// string text = EnteredNumbers();
+
+// int lengthOfArray (string text) 
+// {
+//     int ans = 0;
+//     for(int i = 0; i < text.Length; i++)
+//     {
+//         if(text[i] == ',') ans++; 
+//     }
+//     return ans + 1;
+// }
+
+// string[] translateToArray(string text, int lengthArr)   
+// {
+//     string[] array = new string[lengthArr];
+//     int index = 0;
+//     for(int i = 0; i < text.Length; i++)   
+//     {
+//         if(text[i] != ',') array[index] = array[index] + text[i];
+//         else index++;
+//     } 
+//     return array;
+// }
+
+// string[] textArray = translateToArray(text, lengthOfArray(text));
+
+// int[] fromStringToInt (string[] arrayText)
+// {
+//     int[] array = new int[arrayText.Length];
+//     for(int i = 0; i < arrayText.Length; i++) array[i] = int.Parse(arrayText[i]);
+//     return array;
+// }
+
+// int[] arrayNumbers = fromStringToInt(textArray);
+
+// int PositiveNumbers (int[] array)
+// {
+//     int ans = 0;
+//     for(int l = 0; l < array.Length; l++) 
+//     {
+//         if(array[l] > 0) ans +=1;
+//     }
+//     return ans;
+// }
+
+// Console.WriteLine(PositiveNumbers(arrayNumbers));
+
+//__________________________________
+// string abc = "hf,kv,udhvtu,5,8,fg,h4,-5";
+
+// int lengthOfArray (string text)  //метод, находящий длинну текстового массива
+// {
+//     int ans = 0;
+//     for(int i = 0; i < text.Length; i++)
+//     {
+//         if(text[i] == ',') ans++; 
+//     }
+//     return ans + 1;
+// }
+
+// Console.WriteLine(lengthOfArray(abc));
+
+// string[] translateToArray(string text, int lengthArr)   //метод, создающий строчный массив из текста
+// {
+//     string[] array = new string[lengthArr];
+//     int index = 0;
+//     for(int i = 0; i < text.Length; i++)   //имеется встроенный функционал - phrase.Split
+//     {
+//         if(text[i] != ',') array[index] = array[index] + text[i];
+//         else index++;
+//     } 
+//     return array;
+// }
+
+// string[] textArray = translateToArray(abc, lengthOfArray(abc));
+
+// Console.WriteLine(String.Join(',', textArray));
+
+// string[] filtrNumbers(string[] array)   //не закончил, тут пытаюсь оставить только элементы с числовыми значениями
+// {
+//     string[] filtrArr = new string[array.Length];
+//     int count = 0;
+//     for(int k = 0; k < array.Length; k++)
+//     {
+//        if(array[k] == '-' || '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9');
+//     }
+// }
+
 
 // 43. Написать программу преобразования десятичного числа в двоичное
 
@@ -793,7 +873,7 @@
 
 //_________________________
 
-// int decimalNum = 765646362;
+// int decimalNum = 2048;
 
 // int findIndexNumArray(int arg)
 // {
