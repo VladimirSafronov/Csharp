@@ -732,16 +732,52 @@
 // Console.WriteLine(SubMaxValueAndMinValue(FindMaxValue(arrayA), FindMinValue(arrayA)));
 
 // Почувствуй себя лидом
-// 41. Выяснить являются ли три числа сторонами треугольника 
+//41. Выяснить являются ли три числа сторонами треугольника 
 
-// int a = 3; int b = 2; int c = 4;
-
-// bool IsItTriangle(int argA, int argB, int argC)
+// string InputNumbers()
 // {
-//     return argA + argB > argC && argA + argC > argB && argB + argC > argA;
+//     Console.WriteLine("Введите числа через пробел:");
+//     return Console.ReadLine();
 // }
 
-// Console.WriteLine(IsItTriangle(a, b, c));
+// string numbers = InputNumbers();
+
+// int findLength(string num)
+// {
+//     int lengt = 0;
+//     for(int i = 0; i < num.Length; i++) if(num[i] == ' ') lengt +=1;
+//     return lengt + 1;
+// }
+
+// int lengthArray = findLength(numbers);
+
+// int[] arrayFromString(int numb, string numbers)
+// {
+//     int j = 0;
+//     int[] array = new int[numb];
+//     int i = 0;
+//     while(i < array.Length)
+//     {
+//         if(numbers[j] != ' ') 
+//         {
+//             array[i] = Int32.Parse("" + numbers[j]);  //схитрил
+//             i++;
+//             j++;
+//         }
+//         else j++;
+//     }
+//     return array;
+// }
+
+// int[] arrayA = arrayFromString(lengthArray, numbers);
+
+// bool IsThisTriangle(int[] arr)
+// {
+//     if(arr[0] + arr[1] > arr[2] && arr[1] + arr[2] > arr[0] && arr[0] + arr[2] > arr[1]) return true;
+//     else return false;
+// }
+
+// Console.WriteLine(IsThisTriangle(arrayA));
 
 // // 42. Определить сколько чисел больше 0 введено с клавиатуры
 
@@ -834,7 +870,7 @@
 //     int count = 0;
 //     for(int k = 0; k < array.Length; k++)
 //     {
-//        if(array[k] == '-' || '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9');
+//        if(array[k] == '-');
 //     }
 // }
 
@@ -873,7 +909,7 @@
 
 //_________________________
 
-// int decimalNum = 2048;
+// int decimalNum = int.Parse(Console.ReadLine());
 
 // int findIndexNumArray(int arg)
 // {
