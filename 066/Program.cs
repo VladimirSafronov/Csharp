@@ -2,8 +2,8 @@
 
 string ShowNumbers(int n)
 {
-    if(n == 1) return $" {1}";
-    return $" {n + ShowNumbers(n - 1)}";
+    if(n == 1) return $"{n} ";
+    return $"{ShowNumbers(n-1) + n} ";
 }
 
-Console.WriteLine(ShowNumbers(10));
+Console.WriteLine(ShowNumbers(5));
