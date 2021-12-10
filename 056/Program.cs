@@ -24,7 +24,7 @@ int[,] ReplaceFirstAndLastString(int[,] array)
     int[] temporary = new int[array.GetLength(1)];
     for(int i = 0; i < array.GetLength(1); i++) 
     {
-        temporary[i] = array[0, i];   //Вношу во временный массив первую строку. является ли 0 магическим числом?
+        temporary[i] = array[0, i];   //Вношу во временный массив первую строку. 
         array[0, i] = array[array.GetLength(0) - 1, i]; //Переношу значения с последней строки в первую.
         array[array.GetLength(0) - 1, i] = temporary[i]; //из временного в последнюю строку
     }
